@@ -1,0 +1,20 @@
+group 'com.mmaoyu'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+   //mavenCentral()
+    mavenLocal()
+    maven { url "http://nexus.wanda-itg.local/repository/spring-io-plugins-release/" }
+    maven { url "http://nexus.wanda-itg.local/repository/maven-public/" }
+}
+
+dependencies {
+    compile('cn.easyproject:easyocr:3.0.4-RELEASE')
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
